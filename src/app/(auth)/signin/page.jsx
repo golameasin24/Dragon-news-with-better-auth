@@ -36,6 +36,14 @@ const SignIn = () => {
     alert(`${data.user.name}`);
   };
 
+  if (error) {
+    alert(`${error.message}`);
+    return;
+  }
+
+  if (data) {
+    alert("SignIn Successfully");
+  }
   // const handleGoogleSignin = async () => {
   //   const data = await authClient.signIn.social({
   //     provider: "google",

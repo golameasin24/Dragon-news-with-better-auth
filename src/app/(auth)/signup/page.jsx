@@ -36,12 +36,13 @@ const SignUp = () => {
       callbackURL: "/news/01",
     });
 
-    console.log("new user data:", new_user_data);
-    console.log("sign up response:", { data, error });
-
     if (error) {
-      alert(`Signup error: ${error.message}`);
+      alert(`${error.message}`);
       return;
+    }
+
+    if (data) {
+      alert("signup Successfully");
     }
 
     // সাইন আপ সফল হলে এখানে রিডাইরেক্ট হ্যান্ডেল করা হলো
